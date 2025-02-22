@@ -84,23 +84,16 @@ List<Map<String, dynamic>> subjects = [
     'subject': 'Maths',
     'progress': "completed 11 out of 20",
     'play':
-        "https://youtube.com/playlist?list=PL60GgJ-A96ix_5YaoxuZYSPljrrGbs_H6&feature=shared"
+        "https://youtube.com/playlist?list=PL60GgJ-A96ix_5YaoxuZYSPljrrGbs_H6&feature=shared",
   },
-  {
-    'imgUrl':
-        "https://i.pinimg.com/236x/8b/42/da/8b42da28243a95af418ef32cc5df9261.jpg",
-    'subject': 'Chemistry',
-    'progress': "completed 11 out of 2",
-    'play':
-        "https://youtube.com/playlist?list=PLxCzCOWd7aiEXg5BV10k9THtjnS48yI-T&feature=shared"
-  },
+
   {
     'imgUrl':
         "https://i.pinimg.com/236x/8b/42/da/8b42da28243a95af418ef32cc5df9261.jpg",
     'subject': 'English',
     'progress': "completed 11 out of 20",
     'play':
-        "https://youtube.com/playlist?list=PL60GgJ-A96ix_5YaoxuZYSPljrrGbs_H6&feature=shared"
+        "https://youtube.com/playlist?list=PLwK8x8XNcFWrKdi2_kFXmBJXnyqAGF_Bc&feature=shared",
   },
   {
     'imgUrl':
@@ -108,7 +101,18 @@ List<Map<String, dynamic>> subjects = [
     'subject': 'Physics',
     'progress': "completed 11 out of 20",
     'play':
-        "https://youtube.com/playlist?list=PL60GgJ-A96ix_5YaoxuZYSPljrrGbs_H6&feature=shared"
+        "https://youtube.com/playlist?list=PLwPu0_Swy5sYMNrFIDaZRWKQJ_Qx_Z4lH&feature=shared",
+  },
+];
+
+List<Map<String, dynamic>> essential = [
+  {
+    'imgUrl':
+        "https://i.pinimg.com/236x/8b/42/da/8b42da28243a95af418ef32cc5df9261.jpg",
+    'subject': 'Lessons',
+    'progress': "completed 11 out of 20",
+    'play':
+        "https://youtube.com/playlist?list=PL3CC0DF43F5C8814F&feature=shared",
   },
 ];
 
@@ -117,49 +121,49 @@ List<Map<String, dynamic>> quizes = [
     "image": "assets/greetings_gifs/AllTheBest.gif",
     "question": "What is in this image?",
     "options": ["All the best", "Hello", "Thank you"],
-    "answer": "All the best"
+    "answer": "All the best",
   },
   {
     "image": "assets/greetings_gifs/thankyou.gif",
     "question": "Which fruit is shown here?",
     "options": ["Welcome", "Thank you", "Good Morning"],
-    "answer": "Thank you"
+    "answer": "Thank you",
   },
   {
     "image": "assets/greetings_gifs/GoodMorning.gif",
     "question": "Which vehicle is this?",
     "options": ["Good Afternoon", "Good Night", "Good Morning"],
-    "answer": "Good Morning"
+    "answer": "Good Morning",
   },
   {
     "image": "assets/greetings_gifs/how_are_you.gif",
     "question": "Which programming language logo is this?",
     "options": ["How are you", "Hello", "Bye"],
-    "answer": "How are you"
+    "answer": "How are you",
   },
   {
     "image": "assets/greetings_gifs/GoodBye.gif",
     "question": "Which monument is shown here?",
     "options": ["Hello", "Good morning", "Good Bye"],
-    "answer": "Good Bye"
+    "answer": "Good Bye",
   },
   {
     "image": "assets/greetings_gifs/hello.gif",
     "question": "What is in this image?",
     "options": ["Bye", "Hello", "Thank you"],
-    "answer": "Hello"
+    "answer": "Hello",
   },
   {
     "image": "assets/greetings_gifs/GoodAfternoon.gif",
     "question": "Which fruit is shown here?",
     "options": ["Good Afternoon", "Good Morning", "Good Night"],
-    "answer": "Good Afternoon"
+    "answer": "Good Afternoon",
   },
   {
     "image": "assets/greetings_gifs/goodnight.gif",
     "question": "Which vehicle is this?",
     "options": ["Good Morning", "Good Night", "Good Afternoon"],
-    "answer": "Good Night"
+    "answer": "Good Night",
   },
 ];
 
@@ -169,71 +173,71 @@ List<Map<String, dynamic>> greetings = [
         "https://github.com/srishtiv27/give_me_a_sign/blob/main/assets/images/quizzes/alphabets/C.png?raw=true",
     "question": "What is in this image?",
     "options": ["C", "D", "E"],
-    "answer": "C"
+    "answer": "C",
   },
   {
     "image":
         "https://github.com/srishtiv27/give_me_a_sign/blob/main/assets/images/quizzes/alphabets/D.png?raw=true",
     "question": "Which fruit is shown here?",
     "options": ["A", "R", "D"],
-    "answer": "D"
+    "answer": "D",
   },
   {
     "image":
         "https://github.com/srishtiv27/give_me_a_sign/blob/main/assets/images/quizzes/alphabets/E.png?raw=true",
     "question": "Which vehicle is this?",
     "options": ["Q", "E", "B"],
-    "answer": "E"
+    "answer": "E",
   },
   {
     "image":
         "https://github.com/srishtiv27/give_me_a_sign/blob/main/assets/images/quizzes/alphabets/G.png?raw=true",
     "question": "Which programming language logo is this?",
     "options": ["G", "J", "O"],
-    "answer": "G"
+    "answer": "G",
   },
   {
     "image":
         "https://github.com/srishtiv27/give_me_a_sign/blob/main/assets/images/quizzes/alphabets/K.png?raw=true",
     "question": "Which monument is shown here?",
     "options": ["E", "T", "K"],
-    "answer": "K"
+    "answer": "K",
   },
   {
     "image":
         "https://github.com/srishtiv27/give_me_a_sign/blob/main/assets/images/quizzes/alphabets/M.png?raw=true",
     "question": "What is in this image?",
     "options": ["S", "M", "E"],
-    "answer": "M"
+    "answer": "M",
   },
   {
     "image":
         "https://github.com/srishtiv27/give_me_a_sign/blob/main/assets/images/quizzes/alphabets/O.png?raw=true",
     "question": "Which fruit is shown here?",
     "options": ["O", "B", "M"],
-    "answer": "O"
+    "answer": "O",
   },
   {
     "image":
         "https://github.com/srishtiv27/give_me_a_sign/blob/main/assets/images/quizzes/alphabets/Q.png?raw=true",
     "question": "Which vehicle is this?",
     "options": ["L", "X", "Q"],
-    "answer": "Q"
+    "answer": "Q",
   },
   {
     "image":
         "https://github.com/srishtiv27/give_me_a_sign/blob/main/assets/images/quizzes/alphabets/T.png?raw=true",
     "question": "Which programming language logo is this?",
     "options": ["H", "T", "Z"],
-    "answer": "T"
+    "answer": "T",
   },
   {
     "image":
         "https://github.com/srishtiv27/give_me_a_sign/blob/main/assets/images/quizzes/alphabets/U.png?raw=true",
     "question": "Which monument is shown here?",
     "options": ["N", "T", "U"],
-    "answer": "U"
-  }
+    "answer": "U",
+  },
 ];
 
 List<Map<String, dynamic>> challenges = [
@@ -241,60 +245,60 @@ List<Map<String, dynamic>> challenges = [
     "image": "assets/challenges/cat.gif",
     "question": "What is in this image?",
     "options": ["Cat", "Dog", "Elephant"],
-    "answer": "Cat"
+    "answer": "Cat",
   },
   {
     "image": "assets/challenges/sister.gif",
     "question": "Which fruit is shown here?",
     "options": ["Father", "Sister", "Brother"],
-    "answer": "Sister"
+    "answer": "Sister",
   },
   {
     "image": "assets/challenges/Water.gif",
     "question": "Which vehicle is this?",
     "options": ["Drink", "Milk", "Water"],
-    "answer": "Water"
+    "answer": "Water",
   },
   {
     "image": "assets/challenges/Q.png",
     "question": "Which programming language logo is this?",
     "options": ["G", "Q", "O"],
-    "answer": "Q"
+    "answer": "Q",
   },
   {
     "image": "assets/challenges/yellow.gif",
     "question": "Which monument is shown here?",
     "options": ["yellow", "T", "good morning"],
-    "answer": "yellow"
+    "answer": "yellow",
   },
   {
     "image": "assets/challenges/M.png",
     "question": "What is in this image?",
     "options": ["S", "M", "E"],
-    "answer": "M"
+    "answer": "M",
   },
   {
     "image": "assets/challenges/GoodAfternoon.gif",
     "question": "Which fruit is shown here?",
     "options": ["Good Night", "Good Afternoon", "Good Morning"],
-    "answer": "Good Afternoon"
+    "answer": "Good Afternoon",
   },
   {
     "image": "assets/challenges/T.png",
     "question": "Which vehicle is this?",
     "options": ["T", "X", "Q"],
-    "answer": "T"
+    "answer": "T",
   },
   {
     "image": "assets/challenges/cake.gif",
     "question": "Which programming language logo is this?",
     "options": ["samosa", "cake", "milk"],
-    "answer": "cake"
+    "answer": "cake",
   },
   {
     "image": "assets/challenges/grandfather.gif",
     "question": "Which monument is shown here?",
     "options": ["Mother", "Grand Father", "Grand Mother"],
-    "answer": "Grand Father"
-  }
+    "answer": "Grand Father",
+  },
 ];
