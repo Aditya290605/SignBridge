@@ -17,10 +17,17 @@ class _HomeScreenState extends State<HomeScreenOfVTS> {
 
   void _loadVideo(String word) {
     Map<String, String> signDictionary = {
-      "hello": "assets/sign/hello.mp4",
+      "hello": "assets/sign/Hello.gif",
+      "yes": "assets/hello/Yes.gif",
+      "no": "assets/hello/No.gif",
+      "please": "assets/hello/please.gif",
+      "good night": "assets/hello/Good night.jpg",
+      "i love you": "assets/hello/i_love_you.webp",
+      "nice to meet you": "assets/hello/nice to meet you.gif",
+      "are you all right": "assets/hello/are you all right.gif",
     };
 
-    assetPath = signDictionary[word.toLowerCase()];
+    assetPath = signDictionary[word];
     if (assetPath != null) {
       setState(() {
         isLoading = true;
@@ -28,19 +35,21 @@ class _HomeScreenState extends State<HomeScreenOfVTS> {
 
       _controller?.dispose();
       _controller = VideoPlayerController.asset(assetPath!)
-        ..initialize().then((_) {
-          setState(() {
-            isLoading = false;
-          });
-          _controller!.setVolume(0);
-          _controller!.setLooping(true);
-          _controller!.play();
-        }).catchError((error) {
-          print("Error initializing video: $error");
-          setState(() {
-            isLoading = false;
-          });
-        });
+        ..initialize()
+            .then((_) {
+              setState(() {
+                isLoading = false;
+              });
+              _controller!.setVolume(0);
+              _controller!.setLooping(true);
+              _controller!.play();
+            })
+            .catchError((error) {
+              print("Error initializing video: $error");
+              setState(() {
+                isLoading = false;
+              });
+            });
     } else {
       setState(() {
         isLoading = false;
@@ -136,15 +145,18 @@ class _HomeScreenState extends State<HomeScreenOfVTS> {
                   ),
                   SizedBox(height: 30),
                   ElevatedButton(
-                    onPressed: displayedText.isNotEmpty
-                        ? () {
-                            _loadVideo(displayedText);
-                          }
-                        : null,
+                    onPressed:
+                        displayedText.isNotEmpty
+                            ? () {
+                              _loadVideo(displayedText);
+                            }
+                            : null,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.cyanAccent,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 50,
+                        vertical: 15,
+                      ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
@@ -153,8 +165,11 @@ class _HomeScreenState extends State<HomeScreenOfVTS> {
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.play_circle_fill,
-                            color: Colors.black, size: 30),
+                        Icon(
+                          Icons.play_circle_fill,
+                          color: Colors.black,
+                          size: 30,
+                        ),
                         SizedBox(width: 10),
                         Text(
                           "Show Sign",
@@ -187,27 +202,28 @@ class _HomeScreenState extends State<HomeScreenOfVTS> {
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: Colors.white.withOpacity(0.2)),
       ),
-      child: isLoading
-          ? Center(child: CircularProgressIndicator())
-          : assetPath != null &&
+      child:
+          isLoading
+              ? Center(child: CircularProgressIndicator())
+              : assetPath != null &&
                   _controller != null &&
                   _controller!.value.isInitialized
               ? ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: AspectRatio(
-                    aspectRatio: _controller!.value.aspectRatio,
-                    child: VideoPlayer(_controller!),
-                  ),
-                )
-              : Center(
-                  child: Text(
-                    displayedText.isNotEmpty
-                        ? "Sign not found for '$displayedText'"
-                        : "",
-                    style: GoogleFonts.poppins(fontSize: 18, color: Colors.red),
-                    textAlign: TextAlign.center,
-                  ),
+                borderRadius: BorderRadius.circular(20),
+                child: AspectRatio(
+                  aspectRatio: _controller!.value.aspectRatio,
+                  child: Image.network(assetPath!),
                 ),
+              )
+              : Center(
+                child: Text(
+                  displayedText.isNotEmpty
+                      ? "Sign not found for '$displayedText'"
+                      : "",
+                  style: GoogleFonts.poppins(fontSize: 18, color: Colors.red),
+                  textAlign: TextAlign.center,
+                ),
+              ),
     );
   }
 }

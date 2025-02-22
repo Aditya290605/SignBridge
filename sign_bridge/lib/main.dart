@@ -5,10 +5,14 @@ import 'package:sign_bridge/screens/mainscreen.dart';
 import 'package:sign_bridge/utils/colors.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'utils/user_data.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.android);
+  await UserData.fetchUserName(
+    'userInfo',
+  ); // Replace 'your_user_id' with the actual user ID
   runApp(const MyApp());
 }
 

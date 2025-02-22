@@ -5,6 +5,7 @@ import 'package:sign_bridge/profile/help_center.dart';
 
 import 'package:sign_bridge/profile/feedback_page.dart';
 import 'package:sign_bridge/screens/mainscreen.dart';
+import 'package:sign_bridge/utils/user_data.dart';
 
 class AdvancedProfilePage extends StatelessWidget {
   const AdvancedProfilePage({super.key});
@@ -59,7 +60,7 @@ class AdvancedProfilePage extends StatelessWidget {
               ),
               SizedBox(height: 16),
               Text(
-                'John Doe',
+                UserData.name ?? 'User',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 6),
