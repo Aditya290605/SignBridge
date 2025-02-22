@@ -1,14 +1,12 @@
-//import 'package:camera/camera.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:sign_bridge/learn/acdamics_page.dart';
+import 'package:sign_bridge/dictionary/dictionary_page.dart';
 import 'package:sign_bridge/learn/learning_page.dart';
-//import 'package:sign_bridge/dictionary/dictionary_page.dart';
-//import 'package:sign_bridge/learn/learning_page.dart';
-//import 'package:sign_bridge/quizes/quize_page.dart';
-//import 'package:sign_bridge/services/sign_to_vioce.dart';
-//import 'package:sign_bridge/text_to_speech/tts_page.dart';
-//import 'package:sign_bridge/voice_to_sign/voice_to_sign_homeScreen.dart';
+import 'package:sign_bridge/quizes/quize_page.dart';
+import 'package:sign_bridge/services/sign_to_vioce.dart';
+import 'package:sign_bridge/text_to_speech/tts_page.dart';
+import 'package:sign_bridge/voice_to_sign/voice_to_sign_homeScreen.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -68,7 +66,13 @@ class LandingPage extends StatelessWidget {
                         "endColor": Colors.orange,
                         'context': context,
                         "height": MediaQuery.of(context).size.height * 0.38,
-                        'onTap': () {},
+                        'onTap': () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => DictionaryPage(),
+                            ),
+                          );
+                        },
                         'url':
                             'https://i.pinimg.com/736x/26/74/b6/2674b6e19c35834b1135e8e8c3fec5e8.jpg', // Small card
                       },
@@ -78,7 +82,13 @@ class LandingPage extends StatelessWidget {
                         "endColor": Colors.orange,
                         'context': context,
                         "height": MediaQuery.of(context).size.height * 0.38,
-                        'onTap': () {},
+                        'onTap': () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => HomePageOfQuize(),
+                            ),
+                          );
+                        },
                         'url':
                             "https://i.pinimg.com/736x/d8/e9/0c/d8e90c3c26cb75336b3d51e7739082a1.jpg", // Small card
                       },
@@ -88,7 +98,13 @@ class LandingPage extends StatelessWidget {
                         "endColor": Colors.red,
                         'context': context,
                         "height": MediaQuery.of(context).size.height * 0.3,
-                        'onTap': () {},
+                        'onTap': () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => HomeScreenOfVTS(),
+                            ),
+                          );
+                        },
                         'url':
                             'https://i.pinimg.com/736x/72/23/ad/7223add877ddb9dfdf2593fec35f1e4f.jpg', // Big card
                       },
@@ -98,7 +114,11 @@ class LandingPage extends StatelessWidget {
                         "endColor": Colors.purple,
                         'context': context,
                         "height": MediaQuery.of(context).size.height * 0.3,
-                        'onTap': () {},
+                        'onTap': () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => TTSPage()),
+                          );
+                        },
                         'url':
                             'https://i.pinimg.com/474x/2e/fb/80/2efb805dd22b7349aeae1abdc5a81443.jpg', // Small card
                       },
@@ -108,7 +128,23 @@ class LandingPage extends StatelessWidget {
                         "endColor": Colors.deepOrange,
                         'context': context,
                         "height": MediaQuery.of(context).size.height * 0.3,
-                        'onTap': () {},
+                        'onTap': () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder:
+                                  (context) => SignToVioce(
+                                    cameras: [
+                                      CameraDescription(
+                                        name: 'Camera 1',
+                                        lensDirection:
+                                            CameraLensDirection.front,
+                                        sensorOrientation: 0,
+                                      ),
+                                    ],
+                                  ),
+                            ),
+                          );
+                        },
                         'url':
                             'https://i.pinimg.com/736x/5f/96/0b/5f960b8b585158f982e7e2d66f36f005.jpg', // Big card
                       },

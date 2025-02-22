@@ -91,7 +91,13 @@ flutter:
   assets:
     - assets/images/logo.png
     - assets/images/logo2.png
+    - assets/greetings_gifs/
+    - assets/challenges/
     - assets/images/logo4.png
+    - assets/sign/hello.mp4
+    - assets/tflite/
+    - assets/tflite/model_unquant.tflite
+    - assets/tflite/labels.txt
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
