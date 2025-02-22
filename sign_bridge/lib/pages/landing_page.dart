@@ -1,6 +1,8 @@
 //import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:sign_bridge/learn/acdamics_page.dart';
+import 'package:sign_bridge/learn/learning_page.dart';
 //import 'package:sign_bridge/dictionary/dictionary_page.dart';
 //import 'package:sign_bridge/learn/learning_page.dart';
 //import 'package:sign_bridge/quizes/quize_page.dart';
@@ -49,7 +51,13 @@ class LandingPage extends StatelessWidget {
                         "endColor": Colors.orange,
                         'context': context,
                         "height": MediaQuery.of(context).size.height * 0.3,
-                        'onTap': () {},
+                        'onTap': () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => LearningPage(),
+                            ),
+                          );
+                        },
                         'url':
                             "https://github.com/srishtiv27/give_me_a_sign/blob/main/assets/images/learn.jpg?raw=true",
                         // Small card

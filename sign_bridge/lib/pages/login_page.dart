@@ -70,6 +70,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
@@ -97,13 +98,13 @@ class _LoginPageState extends State<LoginPage> {
             CustomeTextfeild(
               hintText: "Enter your email",
               isPass: false,
-              controller: TextEditingController(),
+              controller: username,
             ),
             const SizedBox(height: 20),
             CustomeTextfeild(
               hintText: "Enter your password",
-              isPass: false,
-              controller: TextEditingController(),
+              isPass: true,
+              controller: pass,
             ),
             const SizedBox(height: 50),
             Center(
