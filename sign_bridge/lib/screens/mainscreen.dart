@@ -33,8 +33,11 @@ class _MainscreenState extends State<Mainscreen> {
             child: AnimatedContainer(
               duration: Duration(seconds: 2),
               curve: Curves.easeOut,
-              transform: Matrix4.translationValues(0,
-                  _animate ? -MediaQuery.of(context).size.height * 0.19 : 0, 0),
+              transform: Matrix4.translationValues(
+                0,
+                _animate ? -MediaQuery.of(context).size.height * 0.19 : 0,
+                0,
+              ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -54,8 +57,8 @@ class _MainscreenState extends State<Mainscreen> {
                       children: [
                         Padding(
                           padding: EdgeInsets.symmetric(
-                              horizontal:
-                                  MediaQuery.of(context).size.width * 0.1),
+                            horizontal: MediaQuery.of(context).size.width * 0.1,
+                          ),
                           child: Text(
                             "Connecting",
                             style: Theme.of(context).textTheme.titleLarge,
@@ -63,8 +66,8 @@ class _MainscreenState extends State<Mainscreen> {
                         ),
                         Padding(
                           padding: EdgeInsets.symmetric(
-                              horizontal:
-                                  MediaQuery.of(context).size.width * 0.1),
+                            horizontal: MediaQuery.of(context).size.width * 0.1,
+                          ),
                           child: Text(
                             "through Signs !",
                             style: Theme.of(context).textTheme.titleLarge,
@@ -87,21 +90,28 @@ class _MainscreenState extends State<Mainscreen> {
               child: Column(
                 children: [
                   CustomeButton(
-                      bgColor: Colors.white,
-                      fgColor: Colors.black,
-                      text: "Sign Up",
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const SignupPage()));
-                      }),
+                    bgColor: Colors.white,
+                    fgColor: Colors.black,
+                    text: "Sign Up",
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const SignupPage(),
+                        ),
+                      );
+                    },
+                  ),
                   const SizedBox(height: 20),
                   CustomeButton(
                     bgColor: bgColor,
                     fgColor: Colors.black,
                     text: "Log In",
                     onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const LoginPage()));
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const LoginPage(),
+                        ),
+                      );
                     },
                     isBorder: true,
                   ),
