@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sign_bridge/pages/landing_page.dart';
+import 'package:sign_bridge/pages/profile_page.dart.dart';
 //import 'package:sign_bridge/pages/profile_page.dart.dart';
 import 'package:sign_bridge/utils/colors.dart';
 
@@ -14,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
     LandingPage(),
-    //AdvancedProfilePage(),
+    AdvancedProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
