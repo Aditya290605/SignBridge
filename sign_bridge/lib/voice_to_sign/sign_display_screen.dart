@@ -30,8 +30,8 @@ class _SignDisplayScreenState extends State<SignDisplayScreen> {
       "please": "assets/hello/please.gif",
       "good night": "assets/hello/Good night.jpg",
       "i love you": "assets/hello/i_love_you.webp",
-      "nice to meet you": "assets/hello/nice to meet you.gif",
-      "are you all right": "assets/hello/are you all right.gif",
+      "nice to meet you": "assets/hello/nice_to_meet_you.gif",
+      "are you all right": "assets/hello/are_you_all_right.jpg",
     };
 
     assetPath = signDictionary[widget.word.toLowerCase()];
@@ -44,13 +44,13 @@ class _SignDisplayScreenState extends State<SignDisplayScreen> {
                 isLoading = false; // Video loaded successfully
               });
 
-              // **Mute the video**
+              // *Mute the video*
               _controller!.setVolume(0);
 
-              // **Loop the video**
+              // *Loop the video*
               _controller!.setLooping(true);
 
-              // **Play the video automatically**
+              // *Play the video automatically*
               _controller!.play();
             })
             .catchError((error) {

@@ -7,9 +7,19 @@ import 'package:sign_bridge/quizes/quize_page.dart';
 import 'package:sign_bridge/services/sign_to_vioce.dart';
 import 'package:sign_bridge/text_to_speech/tts_page.dart';
 import 'package:sign_bridge/voice_to_sign/voice_to_sign_homeScreen.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
+
+  Future<void> _launchURL(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +34,7 @@ class LandingPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Hello User !",
+                    "Hello aditya !",
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                   CircleAvatar(
@@ -128,20 +138,10 @@ class LandingPage extends StatelessWidget {
                         "endColor": Colors.deepOrange,
                         'context': context,
                         "height": MediaQuery.of(context).size.height * 0.3,
-                        'onTap': () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder:
-                                  (context) => SignToVioce(
-                                    cameras: [
-                                      CameraDescription(
-                                        name: 'Camera 1',
-                                        lensDirection:
-                                            CameraLensDirection.front,
-                                        sensorOrientation: 0,
-                                      ),
-                                    ],
-                                  ),
+                        'onTap': () async {
+                          await launchUrl(
+                            Uri.parse(
+                              'https://teachablemachine.withgoogle.com/models/n22YDTOWG/',
                             ),
                           );
                         },

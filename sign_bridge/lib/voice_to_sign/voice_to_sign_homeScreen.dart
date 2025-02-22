@@ -17,42 +17,49 @@ class _HomeScreenState extends State<HomeScreenOfVTS> {
 
   void _loadVideo(String word) {
     Map<String, String> signDictionary = {
-      "hello": "assets/sign/Hello.gif",
+      "hello": "assets/sign/hello.mp4",
       "yes": "assets/hello/Yes.gif",
       "no": "assets/hello/No.gif",
       "please": "assets/hello/please.gif",
       "good night": "assets/hello/Good night.jpg",
       "i love you": "assets/hello/i_love_you.webp",
-      "nice to meet you": "assets/hello/nice to meet you.gif",
-      "are you all right": "assets/hello/are you all right.gif",
+      "nice to meet you": "assets/hello/nice_to_meet_you.gif",
+      "are you all right": "assets/hello/are_you_all_right.gif",
     };
 
-    assetPath = signDictionary[word];
-    if (assetPath != null) {
+    String? path = signDictionary[word.toLowerCase()];
+
+    if (path != null) {
       setState(() {
+        assetPath = path;
         isLoading = true;
       });
 
-      _controller?.dispose();
-      _controller = VideoPlayerController.asset(assetPath!)
-        ..initialize()
-            .then((_) {
-              setState(() {
-                isLoading = false;
+      // Handle Video (MP4)
+      if (path.endsWith('.mp4')) {
+        _controller?.dispose();
+        _controller = VideoPlayerController.asset(path)
+          ..initialize()
+              .then((_) {
+                setState(() => isLoading = false);
+                _controller!.setVolume(0);
+                _controller!.setLooping(true);
+                _controller!.play();
+              })
+              .catchError((error) {
+                print("Error loading video: $error");
+                setState(() => isLoading = false);
               });
-              _controller!.setVolume(0);
-              _controller!.setLooping(true);
-              _controller!.play();
-            })
-            .catchError((error) {
-              print("Error initializing video: $error");
-              setState(() {
-                isLoading = false;
-              });
-            });
+      } else {
+        // Handle Images (GIF, JPG, PNG, WEBP)
+        _controller?.dispose();
+        _controller = null;
+        setState(() => isLoading = false);
+      }
     } else {
       setState(() {
         isLoading = false;
+        assetPath = null;
       });
     }
   }
@@ -205,25 +212,19 @@ class _HomeScreenState extends State<HomeScreenOfVTS> {
       child:
           isLoading
               ? Center(child: CircularProgressIndicator())
-              : assetPath != null &&
-                  _controller != null &&
-                  _controller!.value.isInitialized
-              ? ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: AspectRatio(
-                  aspectRatio: _controller!.value.aspectRatio,
-                  child: Image.network(assetPath!),
+              : assetPath == null
+              ? Center(
+                child: Text(
+                  "Sign not found",
+                  style: TextStyle(fontSize: 18, color: Colors.red),
                 ),
               )
-              : Center(
-                child: Text(
-                  displayedText.isNotEmpty
-                      ? "Sign not found for '$displayedText'"
-                      : "",
-                  style: GoogleFonts.poppins(fontSize: 18, color: Colors.red),
-                  textAlign: TextAlign.center,
-                ),
-              ),
+              : assetPath!.endsWith('.mp4') && _controller != null
+              ? AspectRatio(
+                aspectRatio: _controller!.value.aspectRatio,
+                child: VideoPlayer(_controller!),
+              )
+              : Image.asset(assetPath!, fit: BoxFit.contain),
     );
   }
 }

@@ -60,7 +60,7 @@ class AdvancedProfilePage extends StatelessWidget {
               ),
               SizedBox(height: 16),
               Text(
-                UserData.name ?? 'User',
+                UserData.name ?? 'Aditya',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 6),
