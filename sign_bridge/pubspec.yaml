@@ -100,6 +100,33 @@ flutter:
     - assets/tflite/labels.txt
     - assets/sign/
     - assets/hello/
+    - assets/hello/Yes.gif
+    - assets/hello/No.gif
+    - assets/hello/please.gif
+    - assets/hello/Good night.jpg
+    - assets/hello/applause.gif
+    - assets/hello/are you all right.jpg
+    - assets/hello/Cold.gif
+    - assets/hello/Cool.gif
+    - assets/hello/Eveneing.gif
+    - assets/hello/Food.webp
+    - assets/hello/Friend.gif
+    - assets/hello/Happy fathers day.gif
+    - assets/hello/Happy.gif
+    - assets/hello/Hello.gif
+    - assets/hello/i love you.webp
+    - assets/hello/love.webp
+    - assets/hello/Many.gif
+    - assets/hello/merry chirstamas.gif
+    - assets/hello/miss you.gif
+    - assets/hello/Morning.gif
+    - assets/hello/nice to meet you.gif
+    - assets/hello/Run.gif
+    - assets/hello/Super.gif
+    - assets/hello/understand.gif
+    - assets/hello/water.jpg
+    - assets/hello/win.gif
+    - assets/hello/wonderfull.gif
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
