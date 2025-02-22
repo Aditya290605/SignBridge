@@ -49,10 +49,7 @@ class LandingPage extends StatelessWidget {
                         "endColor": Colors.orange,
                         'context': context,
                         "height": MediaQuery.of(context).size.height * 0.3,
-                        //'onTap': () {
-                        //  Navigator.of(context).push(MaterialPageRoute(
-                        //      builder: (context) => LearningPage()));
-                        //},
+                        'onTap': () {},
                         'url':
                             "https://github.com/srishtiv27/give_me_a_sign/blob/main/assets/images/learn.jpg?raw=true",
                         // Small card
@@ -63,10 +60,7 @@ class LandingPage extends StatelessWidget {
                         "endColor": Colors.orange,
                         'context': context,
                         "height": MediaQuery.of(context).size.height * 0.38,
-                        // 'onTap': () {
-                        //   Navigator.of(context).push(MaterialPageRoute(
-                        //       builder: (context) => DictionaryPage()));
-                        // },
+                        'onTap': () {},
                         'url':
                             'https://i.pinimg.com/736x/26/74/b6/2674b6e19c35834b1135e8e8c3fec5e8.jpg', // Small card
                       },
@@ -76,10 +70,7 @@ class LandingPage extends StatelessWidget {
                         "endColor": Colors.orange,
                         'context': context,
                         "height": MediaQuery.of(context).size.height * 0.38,
-                        //  'onTap': () {
-                        //    Navigator.of(context).push(MaterialPageRoute(
-                        //        builder: (context) => HomePageOfQuize()));
-                        //  },
+                        'onTap': () {},
                         'url':
                             "https://i.pinimg.com/736x/d8/e9/0c/d8e90c3c26cb75336b3d51e7739082a1.jpg", // Small card
                       },
@@ -89,10 +80,7 @@ class LandingPage extends StatelessWidget {
                         "endColor": Colors.red,
                         'context': context,
                         "height": MediaQuery.of(context).size.height * 0.3,
-                        //  'onTap': () {
-                        //    Navigator.of(context).push(MaterialPageRoute(
-                        //        builder: (context) => HomeScreenOfVTS()));
-                        //  },
+                        'onTap': () {},
                         'url':
                             'https://i.pinimg.com/736x/72/23/ad/7223add877ddb9dfdf2593fec35f1e4f.jpg', // Big card
                       },
@@ -102,10 +90,7 @@ class LandingPage extends StatelessWidget {
                         "endColor": Colors.purple,
                         'context': context,
                         "height": MediaQuery.of(context).size.height * 0.3,
-                        //  'onTap': () {
-                        //    Navigator.of(context).push(MaterialPageRoute(
-                        //        builder: (context) => TTSPage()));
-                        //  },
+                        'onTap': () {},
                         'url':
                             'https://i.pinimg.com/474x/2e/fb/80/2efb805dd22b7349aeae1abdc5a81443.jpg', // Small card
                       },
@@ -115,18 +100,7 @@ class LandingPage extends StatelessWidget {
                         "endColor": Colors.deepOrange,
                         'context': context,
                         "height": MediaQuery.of(context).size.height * 0.3,
-                        //   'onTap': () {
-                        //     Navigator.of(context).push(MaterialPageRoute(
-                        //         builder: (context) => SignToVioce(
-                        //               cameras: [
-                        //                 CameraDescription(
-                        //                     name: 'Camera 1',
-                        //                     lensDirection:
-                        //                         CameraLensDirection.front,
-                        //                     sensorOrientation: 0)
-                        //               ],
-                        //             )));
-                        //   },
+                        'onTap': () {},
                         'url':
                             'https://i.pinimg.com/736x/5f/96/0b/5f960b8b585158f982e7e2d66f36f005.jpg', // Big card
                       },
