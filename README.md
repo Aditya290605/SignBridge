@@ -36,6 +36,33 @@
 | **Gamified, Intuitive Design**   | Clean, user-first interface with progress tracking and interactive learning|
 
 ---
+### App Pages
+
+<table style="width: 100%;">
+ <tr>
+      <td>
+        <img src="https://i.postimg.cc/FRP9bJXD/ss2.png" />
+        <b>Splash Screen</b>
+        Displays the SignBridge logo upon app launch.
+      </td>
+      <td>
+        <img src="https://i.postimg.cc/bwFWRHZG/ss.png" />
+        <b>Signup Screen</b>
+        Create an account .
+      </td>
+      <td>
+        <img src="https://i.postimg.cc/6p5gxbkb/ss3.png" />
+        <b>Feaures</b>
+        Features offered by app.
+      </td>
+      <td>
+        <img src="https://i.postimg.cc/NjqFNTZ0/ss4.png" />
+        <b>Achedamic</b>
+        Tutorials page.
+      </td>
+    </tr>
+</table>
+
 
 ## 🛠️ Tech Stack
 
